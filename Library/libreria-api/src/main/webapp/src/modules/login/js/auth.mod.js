@@ -2,9 +2,9 @@
 
     var mod = ng.module('authModule', ['ui.router', 'checklist-model', 'ngMessages', 'ui.bootstrap']);
 
-    mod.config(['$stateProvider', 'authServiceProvider', function ($sp, auth) {
+    mod.config(['$stateProvider', 'authService', function ($sp, auth) {
             var authConfig = auth.getValues();
-
+            console.log(authConfig.loginState);
             $sp.state(authConfig.loginState, {
                 url: '/login',
                 views: {

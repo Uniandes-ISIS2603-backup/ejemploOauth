@@ -100,11 +100,6 @@ SOFTWARE.
                 $log.warn(error);
             });
             $rootScope.authService = authService;
-
-            // Register the authentication listener that is
-            // set up in auth.service.js
-            authService.registerAuthenticationListener();
-
             // Use the authManager from angular-jwt to check for
             // the user's authentication state when the page is
             // refreshed and maintain authentication
