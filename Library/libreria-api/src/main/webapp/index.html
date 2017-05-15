@@ -63,10 +63,13 @@ SOFTWARE.
         <script type="text/javascript" src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
         <script type="text/javascript" src="bower_components/auth0-lock/build/lock.js"></script>
         <script type="text/javascript" src="bower_components/angular-lock/dist/angular-lock.js"></script>
+        <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
         <!-- endbower -->
         <!-- build:js(<%= meta.src %>) scripts/scripts.js -->
         <!-- include: "type": "js", "files": "<%= meta.includeJsFiles %>" -->
+        <script src="src/auth-variables.js"></script>
         <script src="src/app.js"></script>
+        <script src="src/http-interceptor.service.js"></script>
         <script src="src/modules/directives/js/crud.mod.js"></script>
         <script src="src/modules/directives/js/crud.dir.js"></script>        
         <script src="src/modules/loginAuth0/auth.mod.js"></script>
@@ -128,6 +131,7 @@ SOFTWARE.
                                 <li><a ui-sref="authorList({page: 1, limit: 15})">Author</a></li>
                                 <li><a ui-sref="bookList({page: 1, limit: 15})">Book</a></li>
                                 <li><a ui-sref="prizeList({page: 1, limit: 15})">Prize</a></li>
+                                <li><a ui-sref="login">Login</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <login-button></login-button>
